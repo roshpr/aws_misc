@@ -64,4 +64,10 @@ $ aws sts get-caller-identity --profile accountb
 }
 ```
 * The assume role output shows that the user has assumed the role of Account B without providing any credential for Account B.
-* 
+5) Access S3 bucket in Account B using the credentials of a user in Account A
+```
+aws s3 ls --profile accountb
+2022-08-21 18:19:35 assets-345345345345-ap-south-1
+2022-08-21 18:10:27 assets-345345345345-ap-southeast-1
+2022-08-20 18:27:42 assets-345345345345-ap-southeast-2
+```
